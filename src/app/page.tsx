@@ -1,69 +1,88 @@
-import Image from "next/image";
+import { Navbar } from "@/components/navbar/Navbar";
+import { navbarData } from "@/data/navigation";
+import { Hero } from "@/components/hero/Hero";
+import { heroData } from "@/data/hero";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen bg-canvas-ecru text-charcoal flex flex-col">
+      {/* Sticky Header with Decoupled Data Props */}
+      <Navbar data={navbarData} />
+
+      {/* Main Content Areas */}
+      <main className="flex-1">
+        {/* Continuous Animated Hero Section with Roboto Typography */}
+        <Hero data={heroData} />
+
+        {/* Section Anchors for Sticky Navigation */}
+        <section
+          id="collections"
+          className="py-24 px-6 lg:px-12 border-t border-border-subtle bg-canvas-warm/50"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="badge-craft mb-4">Curated Edits</div>
+            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal font-medium">
+              Signature Collections
+            </h2>
+            <p className="mt-3 text-text-muted max-w-xl">
+              From everlasting crochet bouquets to handcrafted gajras and baby plushies.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="shop"
+          className="py-24 px-6 lg:px-12 border-t border-border-subtle bg-canvas-ecru"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="badge-craft mb-4">Catalog</div>
+            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal font-medium">
+              Handcrafted Shop
+            </h2>
+            <p className="mt-3 text-text-muted max-w-xl">
+              Each piece is individually crocheted by hand. Zero mass factory production.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="about"
+          className="py-24 px-6 lg:px-12 border-t border-border-subtle bg-canvas-warm/40"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="badge-craft mb-4">Our Heritage</div>
+            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal font-medium">
+              The Artisan Story
+            </h2>
+            <p className="mt-3 text-text-muted max-w-xl">
+              Reviving age-old Indian crochet craftsmanship, empowering rural women artisans.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="custom-orders"
+          className="py-24 px-6 lg:px-12 border-t border-border-subtle bg-canvas-ecru"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="badge-craft mb-4">Bespoke Commissions</div>
+            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal font-medium">
+              Custom Orders
+            </h2>
+            <p className="mt-3 text-text-muted max-w-xl">
+              Request custom dimensions, yarn blends, colors, and personalized stitches.
+            </p>
+          </div>
+        </section>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-border-subtle py-12 px-6 lg:px-12 bg-canvas-warm/80">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
+          <p className="font-serif text-lg text-charcoal">Crochstan</p>
+          <p>© 2026 Crochasthan / Crochstan. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
