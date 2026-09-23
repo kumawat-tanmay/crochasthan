@@ -158,3 +158,16 @@ Crochasthan brings traditional Indian textile artisanship into a modern, cinemat
 ## 7. AGENT PLANNING PROTOCOL
 
 Whenever creating an `implementation_plan.md` or any architectural design for Crochasthan, you **MUST** explicitly state which specific agent skills (e.g. `frontend-design`, `ui-ux-pro-max`, `gsap-scrolltrigger`, `lenis`, `ui-motion`, `vercel-composition-patterns`) you will be deploying for that task.
+
+---
+
+## 8. MULTI-DEVICE RESPONSIVE DESIGN MATRIX (MANDATORY)
+
+Every layout, section, and component MUST strictly follow responsive scaling across all form factors:
+- **Mobile (360px – 640px)**: Compact, touch-friendly, zero horizontal overflow, thumb-friendly tap targets (≥ 44×44px).
+- **Tablet (641px – 1024px, iPad/Air/Pro)**: Fluid medium scaling, multi-column grids (2-3 columns), balanced vertical rhythm.
+- **Laptop (1025px – 1440px, 13" & 15" screens)**: Standard desktop layout, comfortable margins, single-viewport hero containment.
+- **Desktop & Large Displays (22", 24", 27"+ monitors at 1080p, 1440p, 4K)**:
+  - **Single-Screen Hero Containment**: The hero section must fully fit within the first visible screen (`h-[calc(100dvh-5rem)]` / `max-h-[960px] 2xl:max-h-[1200px]`) so that all primary headlines, badges, marquee rows, and subtitles are 100% visible on landing without requiring vertical scroll.
+  - Generous horizontal and vertical breathing room without image clipping or accidental overflow truncation.
+

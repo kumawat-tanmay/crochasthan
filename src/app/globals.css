@@ -7,16 +7,16 @@
      ========================================================================== */
 
   /* Surfaces & Canvases */
-  --canvas-ecru: #FAF7F2;
-  --canvas-warm: #F3EFE6;
+  --canvas-ecru: #FFFFFF;
+  --canvas-warm: #F8F8F8;
   --surface-card: #FFFFFF;
-  --surface-card-subtle: #F9F6F0;
+  --surface-card-subtle: #F3F3F3;
 
-  /* Primary Brand Accent (Terracotta Sun) */
-  --terracotta-primary: #C85A32;
-  --terracotta-hover: #B24E2A;
-  --terracotta-deep: #A8431F;
-  --terracotta-soft: rgba(200, 90, 50, 0.08);
+  /* Primary Brand Accent (Light Red Velvet) */
+  --terracotta-primary: #C24153;
+  --terracotta-hover: #A82D3E;
+  --terracotta-deep: #8E202D;
+  --terracotta-soft: rgba(194, 65, 83, 0.08);
 
   /* Heritage Secondary Accents */
   --desert-sand: #E3B778;
@@ -25,20 +25,20 @@
   --sage-olive: #5B755E;
 
   /* Typography & Neutrals */
-  --charcoal-wool: #1E1C1A;
-  --bark-deep: #2D2926;
-  --text-muted: #6E6862;
-  --text-light: #FAF7F2;
+  --charcoal-wool: #0A0A0A;
+  --bark-deep: #1A1A1A;
+  --text-muted: #555555;
+  --text-light: #FFFFFF;
 
   /* Borders & Dividers */
-  --border-subtle: rgba(45, 41, 38, 0.1);
-  --border-strong: rgba(45, 41, 38, 0.2);
-  --border-focus: #C85A32;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  --border-focus: #C24153;
 
   /* Artisan Shadows & Depth */
-  --shadow-artisan: 0 10px 30px -10px rgba(168, 67, 31, 0.08);
-  --shadow-card: 0 4px 20px -2px rgba(45, 41, 38, 0.05);
-  --shadow-floating: 0 20px 40px -12px rgba(45, 41, 38, 0.12);
+  --shadow-artisan: 0 10px 30px -10px rgba(194, 65, 83, 0.15);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-floating: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
 
   /* Background & Foreground Baseline */
   --background: var(--canvas-ecru);
@@ -161,3 +161,46 @@ body {
   background-color: var(--canvas-warm);
   border-color: var(--charcoal-wool);
 }
+
+/* ==========================================================================
+   Continuous Infinite Marquee Animations (Seamless GPU Compositing)
+   ========================================================================== */
+@keyframes continuous-marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes continuous-marquee-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left-fast {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: continuous-marquee-left 32s linear infinite;
+}
+
+.animate-marquee-right-smooth {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: continuous-marquee-right 38s linear infinite;
+}
+
+.animate-marquee-left-slow {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: continuous-marquee-left 30s linear infinite;
+}
+

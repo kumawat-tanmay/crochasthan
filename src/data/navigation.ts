@@ -24,7 +24,7 @@ export interface NavbarData {
 }
 
 export const navbarData: NavbarData = {
-  brandName: "Crochstan",
+  brandName: "Crochasthan",
   brandHref: "/",
   navItems: [
     { id: "collections", label: "Collections", href: "#collections" },
@@ -34,8 +34,8 @@ export const navbarData: NavbarData = {
   ],
   socialLink: {
     platform: "Instagram",
-    href: "https://instagram.com",
-    ariaLabel: "Follow Crochstan on Instagram",
+    href: "https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li",
+    ariaLabel: "Follow Crochasthan on Instagram",
   },
   ctaAction: {
     label: "Shop Now",

@@ -20,28 +20,24 @@ export const heroData: HeroData = {
       "/images/optimized/crochet_3.webp",
       "/images/optimized/crochet_4.webp",
       "/images/optimized/crochet_5.webp",
+      "/images/optimized/crochet_6.webp",
     ],
     // Layer 2
     [
-      "/images/optimized/crochet_6.webp",
       "/images/optimized/crochet_7.webp",
       "/images/optimized/crochet_8.webp",
       "/images/optimized/crochet_9.webp",
-    ],
-    // Layer 3
-    [
       "/images/optimized/crochet_10.webp",
       "/images/optimized/crochet_11.webp",
       "/images/optimized/crochet_12.webp",
-      "/images/optimized/crochet_13.webp",
     ],
-    // Layer 4
+    // Layer 3
     [
+      "/images/optimized/crochet_13.webp",
       "/images/optimized/crochet_14.webp",
       "/images/optimized/crochet_15.webp",
       "/images/optimized/crochet_16.webp",
       "/images/optimized/crochet_17.webp",
-      "/images/optimized/crochet_1.webp",
     ],
   ],
 };
