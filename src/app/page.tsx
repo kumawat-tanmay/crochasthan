@@ -4,6 +4,8 @@ import { Hero } from "@/components/hero/Hero";
 import { heroData } from "@/data/hero";
 import { CollectionsSection } from "@/components/collections/CollectionsSection";
 import { ShopSection } from "@/components/shop/ShopSection";
+import { AboutSection } from "@/components/about/AboutSection";
+import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { CustomOrderSection } from "@/components/orders/CustomOrderSection";
 
 export default function Home() {
@@ -23,21 +25,11 @@ export default function Home() {
         {/* Ready-to-Order Catalog Shop with Direct WhatsApp Purchase */}
         <ShopSection />
 
-        {/* Artisan Story & Brand Heritage */}
-        <section
-          id="about"
-          className="py-24 px-6 lg:px-12 border-t border-border-subtle bg-canvas-warm/40"
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="badge-craft mb-4">Our Heritage</div>
-            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal font-medium">
-              The Artisan Story
-            </h2>
-            <p className="mt-3 text-text-muted max-w-xl">
-              Reviving age-old Indian crochet craftsmanship, empowering rural women artisans.
-            </p>
-          </div>
-        </section>
+        {/* Artisan Story & Brand Heritage with Live Instagram Showcase */}
+        <AboutSection />
+
+        {/* What People Say • Indian & Hinglish Marquee Testimonials */}
+        <ReviewsSection />
 
         {/* Bespoke Custom Commissions & Orders */}
         <CustomOrderSection />

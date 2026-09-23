@@ -204,3 +204,18 @@ body {
   animation: continuous-marquee-left 30s linear infinite;
 }
 
+/* Slow, Relaxed Marquee Speeds for Reading Reviews */
+.animate-reviews-left {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: continuous-marquee-left 75s linear infinite;
+}
+
+.animate-reviews-right {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: continuous-marquee-right 80s linear infinite;
+}
+
