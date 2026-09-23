@@ -1,20 +1,23 @@
 import React from "react";
 import { CollectionsGallery } from "./CollectionsGallery";
+import { CollectionsHeaderArt } from "./CollectionsHeaderArt";
 
 export function CollectionsSection() {
   return (
     <section
       id="collections"
-      className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border-subtle bg-canvas-warm/40 relative"
+      className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-border-subtle bg-canvas-warm/40 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Editorial Header */}
-        <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <div className="badge-craft mb-3">Curated Edits</div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal font-medium tracking-tight">
+        {/* Section Editorial Header with Flanking Artisanal Art */}
+        <div className="relative flex flex-col items-center text-center mb-12 sm:mb-16">
+          <CollectionsHeaderArt />
+
+          <div className="badge-craft mb-3 relative z-10">Curated Edits</div>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal font-medium tracking-tight relative z-10">
             Signature Collections
           </h2>
-          <p className="mt-3 text-text-muted text-sm sm:text-base max-w-2xl leading-relaxed">
+          <p className="mt-3 text-text-muted text-sm sm:text-base max-w-2xl leading-relaxed relative z-10">
             Every stitch is individually hand-knotted with pure desert cotton and warm desert dyes.
             Explore our curated gallery of everlasting bouquets, heirloom gajras, and plush companions.
           </p>

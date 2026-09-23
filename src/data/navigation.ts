@@ -30,6 +30,7 @@ export const navbarData: NavbarData = {
     { id: "collections", label: "Collections", href: "#collections" },
     { id: "shop", label: "Shop", href: "#shop" },
     { id: "about", label: "About", href: "#about" },
+    { id: "reviews", label: "Reviews", href: "#reviews" },
     { id: "contact", label: "Contact", href: "#contact" },
   ],
   socialLink: {

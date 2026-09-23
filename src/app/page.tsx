@@ -7,6 +7,7 @@ import { ShopSection } from "@/components/shop/ShopSection";
 import { AboutSection } from "@/components/about/AboutSection";
 import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { ContactSection } from "@/components/contact/ContactSection";
+import { Footer } from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -36,12 +37,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border-subtle py-12 px-6 lg:px-12 bg-canvas-warm/80">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
-          <p className="font-serif text-lg text-charcoal">Crochasthan</p>
-          <p>© 2026 Crochasthan. Handcrafted in Rajasthan, India.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -11,10 +11,19 @@ import {
   Send,
   CheckCircle2,
   AlertCircle,
-  MessageCircle,
   ChevronDown,
   RotateCcw,
 } from "lucide-react";
+
+function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1.4" fill="currentColor" />
+    </svg>
+  );
+}
 
 // Country Codes List with India as Default
 export const countryCodes = [
@@ -106,19 +115,6 @@ export function ContactForm() {
       setIsSubmitting(false);
       setIsSubmitted(true);
     }, 400);
-  };
-
-  // WhatsApp Pre-filled Brief Generator
-  const generateWhatsAppUrl = () => {
-    const message = `*🌸 New Crochasthan Inquiry*\n\n` +
-      `*Name:* ${formData.fullName}\n` +
-      `*Email:* ${formData.email}\n` +
-      `*Phone:* ${formData.countryCode} ${formData.phone}\n` +
-      `*Requirement:* ${formData.needType}\n` +
-      `*Description / Vision:*\n${formData.description}\n\n` +
-      `_Sent via Crochasthan Online Portal_`;
-
-    return `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
   };
 
   const handleReset = () => {
@@ -355,20 +351,20 @@ export function ContactForm() {
                 )}
               </button>
 
-              {/* Instant WhatsApp Option */}
+              {/* Instant Instagram DM Option */}
               <a
-                href="https://wa.me/919876543210?text=Hi%20Crochasthan!%20I%20would%20like%20to%20discuss%20a%20custom%20crochet%20order."
+                href="https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition-all shadow-sm hover:shadow-md cursor-pointer shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-[#1E1C1A] hover:bg-[#C24153] text-white transition-all shadow-sm hover:shadow-md cursor-pointer shrink-0"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Chat on WhatsApp</span>
+                <InstagramIcon className="w-4 h-4" />
+                <span>Chat on Instagram</span>
               </a>
             </div>
           </motion.form>
         ) : (
-          /* Celebratory Confirmation Screen with 1-Click WhatsApp Dispatch */
+          /* Celebratory Confirmation Screen with Direct Instagram Action */
           <motion.div
             key="success-state"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -384,26 +380,26 @@ export function ContactForm() {
             </h3>
 
             <p className="text-sm text-text-muted mt-2 max-w-md mx-auto leading-relaxed">
-              We have received your inquiry for <strong>{formData.needType}</strong>. Our artisans in Jaipur will review your details and respond via WhatsApp or Email within 2 hours.
+              We have received your inquiry for <strong>{formData.needType}</strong>. Our artisans in Jaipur will review your details and respond via Instagram DM or Email within 2 hours.
             </p>
 
-            {/* Direct WhatsApp Instant Brief Button */}
+            {/* Direct Instagram DM Button */}
             <div className="mt-6 w-full max-w-md p-4 rounded-2xl bg-canvas-warm/70 border border-stone-200/80 text-left">
               <p className="text-xs font-bold text-charcoal mb-1 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-terracotta" />
                 Want an instant response?
               </p>
               <p className="text-[11px] text-text-muted mb-3">
-                Send this completed brief directly to our artisan WhatsApp chat with one tap:
+                Send a DM directly to our artisan workshop on Instagram:
               </p>
               <a
-                href={generateWhatsAppUrl()}
+                href="https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition-all shadow-md active:scale-[0.98] cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-semibold bg-[#1E1C1A] hover:bg-[#C24153] text-white transition-all shadow-md active:scale-[0.98] cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Send Brief via WhatsApp Directly</span>
+                <InstagramIcon className="w-4 h-4" />
+                <span>Chat on Instagram (@crochasthan)</span>
               </a>
             </div>
 

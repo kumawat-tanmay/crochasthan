@@ -166,7 +166,7 @@ export function CustomOrderForm() {
                     maxLength={10}
                     value={formData.phone}
                     onChange={(e) => handleChange("phone", e.target.value.replace(/\D/g, ""))}
-                    placeholder="e.g. 9876543210"
+                    placeholder="e.g. 0000000000"
                     className={`w-full pl-10 pr-4 py-3 rounded-2xl text-sm bg-canvas-warm/50 border transition-all duration-200 outline-none focus:bg-white ${
                       errors.phone
                         ? "border-red-400 focus:border-red-500 ring-2 ring-red-100"

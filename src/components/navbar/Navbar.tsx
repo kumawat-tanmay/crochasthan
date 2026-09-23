@@ -59,6 +59,7 @@ export interface NavbarProps {
 export function Navbar({ data }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,11 +68,66 @@ export function Navbar({ data }: NavbarProps) {
       } else {
         setIsScrolled(false);
       }
+
+      // Scroll Spy Section Tracking
+      const scrollPosition = window.scrollY + 140;
+      const sectionIds = data.navItems
+        .map((item) => item.href.replace("#", ""))
+        .filter(Boolean);
+
+      // Bottom of page check
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 60
+      ) {
+        if (sectionIds.length > 0) {
+          setActiveSection(sectionIds[sectionIds.length - 1]);
+          return;
+        }
+      }
+
+      let current = "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            current = id;
+            break;
+          }
+        }
+      }
+
+      setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [data.navItems]);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.startsWith("#")) {
+      const id = href.replace("#", "");
+      setActiveSection(id);
+      const element = document.getElementById(id);
+      if (element) {
+        e.preventDefault();
+        const navbarHeight = 64;
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - navbarHeight,
+          behavior: "smooth",
+        });
+      }
+    }
+    setMobileMenuOpen(false);
+  };
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -109,16 +165,28 @@ export function Navbar({ data }: NavbarProps) {
           className="hidden md:flex items-center gap-7 lg:gap-9"
           aria-label="Main Navigation"
         >
-          {data.navItems.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className="text-[0.9375rem] text-charcoal/75 hover:text-charcoal font-normal transition-colors duration-200 relative group py-1"
-            >
-              {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-terracotta rounded-full transition-all duration-300 ease-out group-hover:w-full" />
-            </Link>
-          ))}
+          {data.navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <a
+                key={item.id}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className={`text-[0.9375rem] transition-colors duration-200 relative group py-1 cursor-pointer ${
+                  isActive
+                    ? "text-terracotta font-semibold"
+                    : "text-charcoal/75 hover:text-charcoal font-normal"
+                }`}
+              >
+                {item.label}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-terracotta rounded-full transition-all duration-300 ease-out ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </a>
+            );
+          })}
         </nav>
 
         {/* Right Section: Social Icon & CTA Button */}
@@ -212,19 +280,37 @@ export function Navbar({ data }: NavbarProps) {
 
               {/* Navigation Modules with Clean Divider Lines */}
               <nav className="mt-3 flex flex-col">
-                {data.navItems.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="py-3.5 text-[0.9375rem] font-medium text-[#1A1A1A] hover:text-[#C24153] border-b border-stone-100 transition-colors flex items-center justify-between group"
-                  >
-                    <span>{item.label}</span>
-                    <span className="text-xs text-stone-400 group-hover:text-[#C24153] transition-colors">
-                      →
-                    </span>
-                  </Link>
-                ))}
+                {data.navItems.map((item) => {
+                  const isActive = activeSection === item.id;
+                  return (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      onClick={(e) => handleNavClick(e, item.href)}
+                      className={`py-3 px-3 rounded-xl text-[0.9375rem] font-medium border-b border-stone-100 transition-all flex items-center justify-between group cursor-pointer ${
+                        isActive
+                          ? "bg-terracotta/10 text-terracotta font-semibold"
+                          : "text-[#1A1A1A] hover:text-terracotta hover:bg-stone-50"
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        {isActive && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-terracotta" />
+                        )}
+                        <span>{item.label}</span>
+                      </span>
+                      <span
+                        className={`text-xs transition-colors ${
+                          isActive
+                            ? "text-terracotta font-bold"
+                            : "text-stone-400 group-hover:text-terracotta"
+                        }`}
+                      >
+                        →
+                      </span>
+                    </a>
+                  );
+                })}
               </nav>
             </div>
 

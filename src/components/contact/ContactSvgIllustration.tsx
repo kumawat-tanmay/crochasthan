@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Clock, Sparkles, MessageCircle, Heart } from "lucide-react";
+import { MapPin, Clock, Sparkles, Heart } from "lucide-react";
 
 export function ContactSvgIllustration() {
   return (
@@ -257,22 +257,26 @@ export function ContactSvgIllustration() {
           </div>
         </div>
 
-        {/* WhatsApp Direct */}
+        {/* Instagram Direct */}
         <a
-          href="https://wa.me/919876543210?text=Hi%20Crochasthan!%20I%20have%20an%20inquiry%20about%20your%20handcrafted%20crochet."
+          href="https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3.5 rounded-2xl bg-emerald-50/80 hover:bg-emerald-100/80 border border-emerald-200/70 transition-colors shadow-xs flex items-center gap-3 cursor-pointer group"
+          className="p-3.5 rounded-2xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200/60 transition-colors shadow-xs flex items-center gap-3 cursor-pointer group"
         >
-          <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-            <MessageCircle className="w-4 h-4" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" strokeWidth="2" />
+              <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="2" />
+              <circle cx="17.5" cy="6.5" r="1.4" fill="currentColor" />
+            </svg>
           </div>
           <div>
-            <p className="text-xs font-bold text-emerald-900 flex items-center gap-1">
-              WhatsApp Us
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <p className="text-xs font-bold text-charcoal flex items-center gap-1">
+              Chat on Instagram
+              <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
             </p>
-            <p className="text-[11px] text-emerald-700 font-medium">+91 98765 43210</p>
+            <p className="text-[11px] text-terracotta font-medium">@crochasthan</p>
           </div>
         </a>
       </div>
