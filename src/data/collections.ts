@@ -145,7 +145,7 @@ export const collectionsData: CollectionItem[] = [
     category: "gajras",
     categoryLabel: "Heritage Gajras",
     stitchType: "FRENCH KNOT CROCHET",
-    imageSrc: "/images/optimized/crochet_10.webp",
+    imageSrc: "/images/optimized/crochet_14.webp",
     aspectRatio: "aspect-[4/5]",
     price: "₹949",
     description: "Handcrafted miniature roses set on an elasticated cotton band for bridal hairstyles.",

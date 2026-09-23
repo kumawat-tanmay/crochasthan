@@ -103,7 +103,7 @@ export const shopProducts: ShopProduct[] = [
     categoryLabel: "Gajras",
     price: 949,
     formattedPrice: "₹949",
-    imageSrc: "/images/optimized/crochet_10.webp",
+    imageSrc: "/images/optimized/crochet_14.webp",
     badge: "Bridal Heirloom",
     artisan: "Suman Bai",
     leadTime: "3–4 days",

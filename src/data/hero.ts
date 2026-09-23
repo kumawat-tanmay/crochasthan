@@ -27,7 +27,7 @@ export const heroData: HeroData = {
       "/images/optimized/crochet_7.webp",
       "/images/optimized/crochet_8.webp",
       "/images/optimized/crochet_9.webp",
-      "/images/optimized/crochet_10.webp",
+      "/images/optimized/crochet_14.webp",
       "/images/optimized/crochet_11.webp",
       "/images/optimized/crochet_12.webp",
     ],
