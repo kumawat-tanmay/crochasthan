@@ -70,8 +70,8 @@ export function CollectionsGallery() {
         })}
       </div>
 
-      {/* Pinterest-Style Masonry Columns */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 [column-fill:_balance]">
+      {/* Pinterest-Style Masonry Columns: 2 columns on mobile, 3 on tablet, 4 on desktop */}
+      <div className="columns-2 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-6 [column-fill:_balance]">
         <AnimatePresence mode="popLayout">
           {displayedItems.map((item, idx) => (
             <motion.div
@@ -85,7 +85,7 @@ export function CollectionsGallery() {
                 delay: Math.min(idx * 0.04, 0.3),
                 ease: [0.25, 0.1, 0.25, 1],
               }}
-              className="break-inside-avoid mb-6 group cursor-pointer"
+              className="break-inside-avoid mb-3 sm:mb-6 group cursor-pointer"
             >
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-canvas-warm/50 border border-border-subtle/60 transition-all duration-500 ease-out hover:shadow-xl hover:border-terracotta/30 hover:-translate-y-1">
                 {/* Image Container with native aspect ratio to prevent CLS */}
@@ -94,22 +94,22 @@ export function CollectionsGallery() {
                     src={item.imageSrc}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     loading={idx < 4 ? "eager" : "lazy"}
                   />
 
-                  {/* Top-Left: Handmade Tag with Heart Icon (Replacing old tags) */}
-                  <div className="absolute top-3.5 left-3.5 pointer-events-none z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide bg-white/95 text-charcoal backdrop-blur-md shadow-sm border border-white/80">
-                      <Heart className="w-3 h-3 fill-terracotta text-terracotta" />
+                  {/* Top-Left: Handmade Tag with Heart Icon */}
+                  <div className="absolute top-2 left-2 sm:top-3.5 sm:left-3.5 pointer-events-none z-10">
+                    <span className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-medium tracking-wide bg-white/95 text-charcoal backdrop-blur-md shadow-xs sm:shadow-sm border border-white/80">
+                      <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-terracotta text-terracotta" />
                       <span>Handmade</span>
                     </span>
                   </div>
 
                   {/* Subtle Gradient Shadow Vignette with Title Reveal on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-end p-4 sm:p-5">
-                    <p className="text-white font-serif text-sm sm:text-base font-medium leading-snug drop-shadow-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-end p-3 sm:p-5">
+                    <p className="text-white font-serif text-xs sm:text-base font-medium leading-snug drop-shadow-sm">
                       {item.title}
                     </p>
                   </div>
