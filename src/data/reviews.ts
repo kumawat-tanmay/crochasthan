@@ -37,7 +37,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-1",
       name: "Ananya Sharma",
-      city: "Jaipur",
+      city: "Delhi",
       purchasedItem: "Eternal Sunflower Bouquet",
       rating: 5,
       date: "2 days ago",
@@ -49,7 +49,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-2",
       name: "Tanya Kapoor",
-      city: "Mumbai",
+      city: "Jaipur",
       purchasedItem: "Bridal Hair Gajra",
       rating: 5,
       date: "1 week ago",
@@ -61,7 +61,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-3",
       name: "Rohan Malhotra",
-      city: "Delhi",
+      city: "Mumbai",
       purchasedItem: "Custom Anniversary Bouquet",
       rating: 5,
       date: "3 days ago",
@@ -72,7 +72,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-4",
       name: "Pooja Verma",
-      city: "Pune",
+      city: "Jaipur",
       purchasedItem: "Forest Bunny Amigurumi",
       rating: 5,
       date: "2 weeks ago",
@@ -96,7 +96,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-6",
       name: "Kritika Joshi",
-      city: "Udaipur",
+      city: "Jaipur",
       purchasedItem: "Terracotta Tote Bag",
       rating: 5,
       date: "1 week ago",
@@ -110,7 +110,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-7",
       name: "Riddhi Patel",
-      city: "Ahmedabad",
+      city: "Delhi",
       purchasedItem: "Royal Marigold Garland",
       rating: 5,
       date: "4 days ago",
@@ -122,7 +122,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-8",
       name: "Aarav Singhania",
-      city: "Gurgaon",
+      city: "Jaipur",
       purchasedItem: "Custom Plush Fox",
       rating: 5,
       date: "6 days ago",
@@ -134,7 +134,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-9",
       name: "Meenakshi Nair",
-      city: "Kochi",
+      city: "Hyderabad",
       purchasedItem: "Pastel Tulip Trio",
       rating: 5,
       date: "1 week ago",
@@ -145,7 +145,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-10",
       name: "Simran Kaur",
-      city: "Chandigarh",
+      city: "Jaipur",
       purchasedItem: "Mogra Hair Gajra",
       rating: 5,
       date: "3 days ago",
@@ -157,7 +157,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-11",
       name: "Harshit Agarwal",
-      city: "Indore",
+      city: "Pune",
       purchasedItem: "Single Rose Stem Wrap",
       rating: 5,
       date: "1 week ago",
@@ -169,7 +169,7 @@ export const reviewsData: ReviewsSectionData = {
     {
       id: "rev-12",
       name: "Divya Menon",
-      city: "Hyderabad",
+      city: "Jaipur",
       purchasedItem: "Macramé-Crochet Sling",
       rating: 5,
       date: "5 days ago",

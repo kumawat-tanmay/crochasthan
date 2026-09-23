@@ -53,7 +53,7 @@ interface InstagramMockupProps {
 
 export function InstagramMockup({ instagramUrl, instagramHandle }: InstagramMockupProps) {
   return (
-    <div className="relative mx-auto max-w-[340px] sm:max-w-[380px] w-full">
+    <div className="relative mx-auto max-w-[340px] sm:max-w-[380px] w-full pt-8 sm:pt-10">
       {/* Soft Ambient Terracotta Glow */}
       <div className="absolute -inset-4 bg-gradient-to-tr from-terracotta/25 via-desert-sand/20 to-transparent blur-3xl -z-10 rounded-full pointer-events-none" />
 
@@ -97,7 +97,7 @@ export function InstagramMockup({ instagramUrl, instagramHandle }: InstagramMock
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4 }}
-          className="absolute -bottom-4 -left-3 sm:-bottom-5 sm:-left-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-stone-200/70 flex items-center gap-3 z-30"
+          className="absolute -top-8 sm:-top-10 right-0 sm:-right-3 bg-white/95 backdrop-blur-md px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl shadow-xl border border-stone-200/70 flex items-center gap-2.5 sm:gap-3 z-30"
         >
           <div className="w-9 h-9 rounded-full bg-canvas-warm flex items-center justify-center shrink-0">
             <InstagramGradientIcon className="w-5 h-5" />
