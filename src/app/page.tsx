@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { navbarData } from "@/data/navigation";
 import { Hero } from "@/components/hero/Hero";
 import { heroData } from "@/data/hero";
+import { CollectionsSection } from "@/components/collections/CollectionsSection";
 
 export default function Home() {
   return (
@@ -14,21 +15,8 @@ export default function Home() {
         {/* Continuous Animated Hero Section with Roboto Typography */}
         <Hero data={heroData} />
 
-        {/* Section Anchors for Sticky Navigation */}
-        <section
-          id="collections"
-          className="py-24 px-6 lg:px-12 border-t border-border-subtle bg-canvas-warm/50"
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="badge-craft mb-4">Curated Edits</div>
-            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal font-medium">
-              Signature Collections
-            </h2>
-            <p className="mt-3 text-text-muted max-w-xl">
-              From everlasting crochet bouquets to handcrafted gajras and baby plushies.
-            </p>
-          </div>
-        </section>
+        {/* Pinterest-Style Masonry Signature Collections */}
+        <CollectionsSection />
 
         <section
           id="shop"
