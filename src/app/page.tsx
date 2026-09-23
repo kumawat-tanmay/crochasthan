@@ -6,7 +6,7 @@ import { CollectionsSection } from "@/components/collections/CollectionsSection"
 import { ShopSection } from "@/components/shop/ShopSection";
 import { AboutSection } from "@/components/about/AboutSection";
 import { ReviewsSection } from "@/components/reviews/ReviewsSection";
-import { CustomOrderSection } from "@/components/orders/CustomOrderSection";
+import { ContactSection } from "@/components/contact/ContactSection";
 
 export default function Home() {
   return (
@@ -31,8 +31,8 @@ export default function Home() {
         {/* What People Say • Indian & Hinglish Marquee Testimonials */}
         <ReviewsSection />
 
-        {/* Bespoke Custom Commissions & Orders */}
-        <CustomOrderSection />
+        {/* Bespoke Custom Commissions & Contact */}
+        <ContactSection />
       </main>
 
       {/* Footer */}

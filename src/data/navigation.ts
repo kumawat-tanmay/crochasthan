@@ -30,7 +30,7 @@ export const navbarData: NavbarData = {
     { id: "collections", label: "Collections", href: "#collections" },
     { id: "shop", label: "Shop", href: "#shop" },
     { id: "about", label: "About", href: "#about" },
-    { id: "custom-orders", label: "Custom Orders", href: "#custom-orders" },
+    { id: "contact", label: "Contact", href: "#contact" },
   ],
   socialLink: {
     platform: "Instagram",
