@@ -7,9 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { NavbarData } from "@/data/navigation";
 
 function InstagramIcon({ className = "w-6 h-6" }: { className?: string }) {
+  const uniqueId = React.useId().replace(/[^a-zA-Z0-9]/g, "");
+  const gradId = `ig-grad-${uniqueId}`;
+
   return (
     <svg
       className={className}
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       fill="none"
       strokeLinecap="round"
@@ -17,7 +22,7 @@ function InstagramIcon({ className = "w-6 h-6" }: { className?: string }) {
       aria-hidden="true"
     >
       <defs>
-        <linearGradient id="ig-real-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+        <linearGradient id={gradId} x1="0%" y1="100%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#F09433" />
           <stop offset="25%" stopColor="#E6683C" />
           <stop offset="50%" stopColor="#DC2743" />
@@ -32,17 +37,17 @@ function InstagramIcon({ className = "w-6 h-6" }: { className?: string }) {
         y="2"
         rx="5.5"
         ry="5.5"
-        stroke="url(#ig-real-gradient)"
+        stroke={`url(#${gradId})`}
         strokeWidth="2.2"
       />
       <circle
         cx="12"
         cy="12"
         r="4.2"
-        stroke="url(#ig-real-gradient)"
+        stroke={`url(#${gradId})`}
         strokeWidth="2.2"
       />
-      <circle cx="17.5" cy="6.5" r="1.4" fill="url(#ig-real-gradient)" />
+      <circle cx="17.5" cy="6.5" r="1.4" fill={`url(#${gradId})`} />
     </svg>
   );
 }
@@ -139,21 +144,21 @@ export function Navbar({ data }: NavbarProps) {
         </div>
 
         {/* Mobile Right: Guaranteed Instagram Icon & Hamburger Button */}
-        <div className="flex md:hidden items-center gap-1.5 sm:gap-2.5">
+        <div className="flex md:hidden items-center gap-1">
           <a
             href={data.socialLink?.href || "https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow Crochasthan on Instagram"
-            className="hover:scale-110 transition-transform duration-200 p-1.5 inline-flex items-center justify-center cursor-pointer"
+            className="w-11 h-11 inline-flex items-center justify-center shrink-0 rounded-full hover:bg-canvas-warm/70 active:scale-95 transition-all cursor-pointer"
           >
-            <InstagramIcon className="w-6 h-6" />
+            <InstagramIcon className="w-6 h-6 shrink-0" />
           </a>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open navigation menu"
-            className="p-1.5 text-charcoal hover:bg-canvas-warm rounded-full transition-colors cursor-pointer"
+            className="w-11 h-11 inline-flex items-center justify-center shrink-0 text-charcoal hover:bg-canvas-warm rounded-full transition-colors cursor-pointer"
           >
             <Menu className="w-6 h-6" strokeWidth={1.75} />
           </button>

@@ -155,9 +155,11 @@ Crochasthan brings traditional Indian textile artisanship into a modern, cinemat
 
 ---
 
-## 7. AGENT PLANNING PROTOCOL
+## 7. AGENT PLANNING & EXECUTION PROTOCOL (USER OVERRIDE)
 
-Whenever creating an `implementation_plan.md` or any architectural design for Crochasthan, you **MUST** explicitly state which specific agent skills (e.g. `frontend-design`, `ui-ux-pro-max`, `gsap-scrolltrigger`, `lenis`, `ui-motion`, `vercel-composition-patterns`) you will be deploying for that task.
+- **Only Plan When Explicitly Instructed**: Only create an `implementation_plan.md` or block asking for confirmation when the user explicitly requests to "make plan" or "plan".
+- **Execute Directly for All Other Tasks**: For bug fixes, UI/UX tweaks, styling adjustments, component updates, and small-to-medium changes, DO NOT make an implementation plan or block asking for permission. Execute the changes directly and cleanly.
+- **Skill Transparency**: Whenever creating an `implementation_plan.md` upon explicit user request, you **MUST** explicitly state which specific agent skills (e.g. `frontend-design`, `ui-ux-pro-max`, `gsap-scrolltrigger`, `lenis`, `ui-motion`, `vercel-composition-patterns`) you will be deploying for that task.
 
 ---
 
