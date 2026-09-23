@@ -20,22 +20,22 @@ export function Hero({ data }: HeroProps) {
       {/* =========================================================================
           3 Continuous Infinite Moving Rows (Symmetrical Top & Bottom Spacing, 4-Side Rounded)
           ========================================================================= */}
-      <div className="absolute inset-0 flex flex-col justify-evenly py-4 sm:py-8 lg:py-10 pointer-events-none opacity-100">
+      <div className="absolute inset-0 flex flex-col justify-between py-3 sm:py-4 md:py-5 gap-2 sm:gap-3 pointer-events-none opacity-100">
         {/* Row 1: Continuous Infinite Drift Left */}
-        <div className="w-full overflow-hidden">
-          <div className="animate-marquee-left-fast py-1">
+        <div className="w-full flex-1 min-h-0 overflow-hidden flex items-center">
+          <div className="animate-marquee-left-fast h-full flex items-center py-1">
             {row1.map((src, idx) => (
               <div
                 key={`r1-${idx}`}
-                className="rounded-2xl sm:rounded-3xl overflow-hidden mx-2.5 sm:mx-3.5 md:mx-4 shadow-md border border-white/80 bg-canvas-warm flex-shrink-0"
+                className="h-full aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden mx-2 sm:mx-3 md:mx-3.5 shadow-md border border-white/80 bg-canvas-warm flex-shrink-0"
               >
                 <Image
                   src={src}
                   alt="Handmade crochet creation"
-                  width={320}
-                  height={200}
+                  width={360}
+                  height={225}
                   loading="eager"
-                  className="w-52 h-34 sm:w-52 sm:h-32 md:w-60 md:h-36 lg:w-72 lg:h-42 2xl:w-80 2xl:h-48 object-cover rounded-2xl sm:rounded-3xl"
+                  className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
                 />
               </div>
             ))}
@@ -43,20 +43,20 @@ export function Hero({ data }: HeroProps) {
         </div>
 
         {/* Row 2: Continuous Infinite Drift Right */}
-        <div className="w-full overflow-hidden">
-          <div className="animate-marquee-right-smooth py-1">
+        <div className="w-full flex-1 min-h-0 overflow-hidden flex items-center">
+          <div className="animate-marquee-right-smooth h-full flex items-center py-1">
             {row2.map((src, idx) => (
               <div
                 key={`r2-${idx}`}
-                className="rounded-2xl sm:rounded-3xl overflow-hidden mx-2.5 sm:mx-3.5 md:mx-4 shadow-md border border-white/80 bg-canvas-warm flex-shrink-0"
+                className="h-full aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden mx-2 sm:mx-3 md:mx-3.5 shadow-md border border-white/80 bg-canvas-warm flex-shrink-0"
               >
                 <Image
                   src={src}
                   alt="Handmade crochet flowers and bouquets"
-                  width={320}
-                  height={200}
+                  width={360}
+                  height={225}
                   loading="eager"
-                  className="w-52 h-34 sm:w-52 sm:h-32 md:w-60 md:h-36 lg:w-72 lg:h-42 2xl:w-80 2xl:h-48 object-cover rounded-2xl sm:rounded-3xl"
+                  className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
                 />
               </div>
             ))}
@@ -64,20 +64,20 @@ export function Hero({ data }: HeroProps) {
         </div>
 
         {/* Row 3: Continuous Infinite Drift Left */}
-        <div className="w-full overflow-hidden">
-          <div className="animate-marquee-left-slow py-1">
+        <div className="w-full flex-1 min-h-0 overflow-hidden flex items-center">
+          <div className="animate-marquee-left-slow h-full flex items-center py-1">
             {row3.map((src, idx) => (
               <div
                 key={`r3-${idx}`}
-                className="rounded-2xl sm:rounded-3xl overflow-hidden mx-2.5 sm:mx-3.5 md:mx-4 shadow-md border border-white/80 bg-canvas-warm flex-shrink-0"
+                className="h-full aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden mx-2 sm:mx-3 md:mx-3.5 shadow-md border border-white/80 bg-canvas-warm flex-shrink-0"
               >
                 <Image
                   src={src}
                   alt="Artisanal crochet accessories"
-                  width={320}
-                  height={200}
+                  width={360}
+                  height={225}
                   loading="eager"
-                  className="w-52 h-34 sm:w-52 sm:h-32 md:w-60 md:h-36 lg:w-72 lg:h-42 2xl:w-80 2xl:h-48 object-cover rounded-2xl sm:rounded-3xl"
+                  className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
                 />
               </div>
             ))}
