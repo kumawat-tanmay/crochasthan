@@ -86,7 +86,7 @@ export function AboutSection() {
               {aboutData.pillars.map((pillar, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-2xl bg-white/80 border border-border-subtle/80 shadow-xs hover:border-terracotta/30 transition-all"
+                  className="neu-card p-4 rounded-2xl transition-all"
                 >
                   <div className="w-8 h-8 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center mb-2.5">
                     {pillar.iconName === "flower" && <Flower2 className="w-4 h-4" />}
@@ -123,7 +123,7 @@ export function AboutSection() {
                 href={aboutData.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 xs:px-5 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-charcoal text-canvas-ecru hover:bg-terracotta active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-4 xs:px-5 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold skeuo-btn-secondary cursor-pointer shrink-0"
               >
                 <InstagramGradientIcon className="w-4 h-4 shrink-0" />
                 <span className="whitespace-nowrap">Visit Our Instagram ({aboutData.instagramHandle})</span>
@@ -132,7 +132,7 @@ export function AboutSection() {
 
               <a
                 href="#custom-orders"
-                className="inline-flex items-center justify-center gap-1.5 px-6 py-3.5 rounded-full text-sm font-medium text-charcoal hover:text-terracotta hover:bg-white/80 transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-1.5 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold skeuo-pill border border-stone-200/80 text-charcoal cursor-pointer"
               >
                 <span>Request Custom Order</span>
               </a>

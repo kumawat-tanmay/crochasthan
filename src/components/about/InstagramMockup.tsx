@@ -97,7 +97,7 @@ export function InstagramMockup({ instagramUrl, instagramHandle }: InstagramMock
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4 }}
-          className="absolute -top-8 sm:-top-10 right-0 sm:-right-3 bg-white/95 backdrop-blur-md px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl shadow-xl border border-stone-200/70 flex items-center gap-2.5 sm:gap-3 z-30"
+          className="neu-card absolute -top-8 sm:-top-10 right-0 sm:-right-3 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl flex items-center gap-2.5 sm:gap-3 z-30"
         >
           <div className="w-9 h-9 rounded-full bg-canvas-warm flex items-center justify-center shrink-0">
             <InstagramGradientIcon className="w-5 h-5" />

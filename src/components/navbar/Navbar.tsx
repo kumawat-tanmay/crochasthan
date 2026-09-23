@@ -205,7 +205,7 @@ export function Navbar({ data }: NavbarProps) {
 
           <Link
             href={data.ctaAction.href}
-            className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-medium bg-terracotta text-canvas-ecru hover:bg-terracotta-hover transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98] cursor-pointer"
+            className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-medium skeuo-btn-primary cursor-pointer"
           >
             {data.ctaAction.label}
           </Link>
@@ -319,7 +319,7 @@ export function Navbar({ data }: NavbarProps) {
               <Link
                 href={data.ctaAction.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center py-2.5 px-5 rounded-full text-sm font-semibold bg-[#C24153] text-white hover:bg-[#A82D3E] transition-colors shadow-sm"
+                className="w-full flex items-center justify-center py-2.5 px-5 rounded-full text-sm font-semibold skeuo-btn-primary cursor-pointer"
               >
                 {data.ctaAction.label}
               </Link>

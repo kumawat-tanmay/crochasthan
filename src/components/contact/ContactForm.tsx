@@ -131,7 +131,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="relative rounded-3xl bg-white border border-stone-200/80 p-6 sm:p-8 lg:p-10 shadow-lg shadow-terracotta/5">
+    <div className="neu-card rounded-3xl p-6 sm:p-8 lg:p-10">
       <AnimatePresence mode="wait">
         {!isSubmitted ? (
           <motion.form
@@ -171,10 +171,10 @@ export function ContactForm() {
                     value={formData.fullName}
                     onChange={(e) => handleChange("fullName", e.target.value)}
                     placeholder="e.g. Ananya Sharma"
-                    className={`w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm bg-canvas-warm/40 border transition-all duration-200 placeholder:text-stone-400 text-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta/20 ${
+                    className={`w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm skeuo-input placeholder:text-stone-400 text-charcoal focus:outline-none ${
                       errors.fullName
-                        ? "border-red-400 bg-red-50/20"
-                        : "border-stone-200 hover:border-stone-300 focus:border-terracotta"
+                        ? "!border-red-400 !bg-red-50/30"
+                        : ""
                     }`}
                   />
                 </div>
@@ -202,10 +202,10 @@ export function ContactForm() {
                     value={formData.email}
                     onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="e.g. ananya@example.com"
-                    className={`w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm bg-canvas-warm/40 border transition-all duration-200 placeholder:text-stone-400 text-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta/20 ${
+                    className={`w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm skeuo-input placeholder:text-stone-400 text-charcoal focus:outline-none ${
                       errors.email
-                        ? "border-red-400 bg-red-50/20"
-                        : "border-stone-200 hover:border-stone-300 focus:border-terracotta"
+                        ? "!border-red-400 !bg-red-50/30"
+                        : ""
                     }`}
                   />
                 </div>
@@ -232,7 +232,7 @@ export function ContactForm() {
                   <select
                     value={formData.countryCode}
                     onChange={(e) => handleChange("countryCode", e.target.value)}
-                    className="w-full appearance-none pl-3 pr-8 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-medium bg-canvas-warm/60 border border-stone-200 hover:border-stone-300 focus:border-terracotta focus:outline-none focus:ring-2 focus:ring-terracotta/20 text-charcoal cursor-pointer"
+                    className="w-full appearance-none pl-3 pr-8 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-medium skeuo-input text-charcoal cursor-pointer focus:outline-none"
                   >
                     {countryCodes.map((item) => (
                       <option key={item.code} value={item.code}>
@@ -255,10 +255,10 @@ export function ContactForm() {
                     }
                     placeholder="10-digit mobile number"
                     maxLength={12}
-                    className={`w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm bg-canvas-warm/40 border transition-all duration-200 placeholder:text-stone-400 text-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta/20 ${
+                    className={`w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm skeuo-input placeholder:text-stone-400 text-charcoal focus:outline-none ${
                       errors.phone
-                        ? "border-red-400 bg-red-50/20"
-                        : "border-stone-200 hover:border-stone-300 focus:border-terracotta"
+                        ? "!border-red-400 !bg-red-50/30"
+                        : ""
                     }`}
                   />
                 </div>
@@ -284,10 +284,10 @@ export function ContactForm() {
                       key={cat.id}
                       type="button"
                       onClick={() => handleChange("needType", cat.label)}
-                      className={`px-3 py-2 sm:py-2.5 rounded-xl text-left text-xs font-medium border transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
+                      className={`px-3 py-2 sm:py-2.5 rounded-xl text-left text-xs font-medium border flex items-center gap-1.5 cursor-pointer ${
                         isSelected
-                          ? "bg-terracotta text-white border-terracotta shadow-xs scale-[1.01]"
-                          : "bg-canvas-warm/30 border-stone-200/80 text-charcoal hover:border-terracotta/40 hover:bg-canvas-warm"
+                          ? "skeuo-pill-active border-terracotta/40 scale-[1.01]"
+                          : "skeuo-pill border-stone-200/80 text-charcoal hover:border-terracotta/40"
                       }`}
                     >
                       <span className="text-sm shrink-0">{cat.emoji}</span>
@@ -312,10 +312,10 @@ export function ContactForm() {
                 value={formData.description}
                 onChange={(e) => handleChange("description", e.target.value)}
                 placeholder="Describe what you have in mind: preferred flower colors, occasion (wedding, anniversary, birthday), delivery timeline, or any reference ideas..."
-                className={`w-full p-3.5 rounded-xl text-xs sm:text-sm bg-canvas-warm/40 border transition-all duration-200 placeholder:text-stone-400 text-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta/20 resize-none ${
+                className={`w-full p-3.5 rounded-xl text-xs sm:text-sm skeuo-input placeholder:text-stone-400 text-charcoal focus:outline-none resize-none ${
                   errors.description
-                    ? "border-red-400 bg-red-50/20"
-                    : "border-stone-200 hover:border-stone-300 focus:border-terracotta"
+                    ? "!border-red-400 !bg-red-50/30"
+                    : ""
                 }`}
               />
               <div className="flex items-center justify-between mt-1 text-[11px] text-text-muted">
@@ -336,7 +336,7 @@ export function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-terracotta hover:bg-terracotta-deep text-white shadow-md hover:shadow-lg transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold skeuo-btn-primary cursor-pointer disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <>
@@ -356,7 +356,7 @@ export function ContactForm() {
                 href="https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-[#1E1C1A] hover:bg-[#C24153] text-white transition-all shadow-sm hover:shadow-md cursor-pointer shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-semibold skeuo-btn-secondary cursor-pointer shrink-0"
               >
                 <InstagramIcon className="w-4 h-4" />
                 <span>Chat on Instagram</span>
@@ -371,7 +371,7 @@ export function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="py-8 text-center flex flex-col items-center"
           >
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
+            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 neu-card">
               <CheckCircle2 className="w-9 h-9" />
             </div>
 
@@ -384,7 +384,7 @@ export function ContactForm() {
             </p>
 
             {/* Direct Instagram DM Button */}
-            <div className="mt-6 w-full max-w-md p-4 rounded-2xl bg-canvas-warm/70 border border-stone-200/80 text-left">
+            <div className="mt-6 w-full max-w-md p-4 rounded-2xl neu-card text-left">
               <p className="text-xs font-bold text-charcoal mb-1 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-terracotta" />
                 Want an instant response?
@@ -396,7 +396,7 @@ export function ContactForm() {
                 href="https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-semibold bg-[#1E1C1A] hover:bg-[#C24153] text-white transition-all shadow-md active:scale-[0.98] cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-semibold skeuo-btn-secondary cursor-pointer"
               >
                 <InstagramIcon className="w-4 h-4" />
                 <span>Chat on Instagram (@crochasthan)</span>

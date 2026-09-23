@@ -31,26 +31,19 @@ export function ShopCatalog() {
   return (
     <div className="w-full">
       {/* Category Navigation Pills */}
-      <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+      <div className="flex items-center justify-start sm:justify-center gap-2.5 overflow-x-auto pb-4 mb-10 no-scrollbar">
         {categories.map((cat) => {
           const isActive = activeCategory === cat.id;
           return (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`relative px-5 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 shrink-0 cursor-pointer ${
+              className={`relative px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 shrink-0 cursor-pointer ${
                 isActive
-                  ? "bg-terracotta text-canvas-ecru shadow-sm"
-                  : "bg-canvas-warm/80 text-charcoal/70 hover:bg-canvas-warm hover:text-charcoal border border-border-subtle/50"
+                  ? "skeuo-pill-active"
+                  : "skeuo-pill text-charcoal/80"
               }`}
             >
-              {isActive && (
-                <motion.span
-                  layoutId="activeShopPill"
-                  className="absolute inset-0 rounded-full bg-terracotta -z-10"
-                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                />
-              )}
               {cat.label}
             </button>
           );
@@ -68,7 +61,7 @@ export function ShopCatalog() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-border-subtle/70 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group"
+              className="neu-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col group"
             >
               {/* Pinterest-Style Portrait Image Frame */}
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone-100">
@@ -83,7 +76,7 @@ export function ShopCatalog() {
                 {/* Badge Overlay */}
                 {product.badge && (
                   <div className="absolute top-2 left-2 sm:top-3.5 sm:left-3.5 z-10">
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase bg-terracotta text-canvas-ecru shadow-sm">
+                    <span className="skeuo-badge inline-flex items-center gap-1 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] font-bold tracking-wider uppercase text-terracotta">
                       <Sparkles className="w-2.5 h-2.5" />
                       <span className="hidden xs:inline sm:inline">{product.badge}</span>
                     </span>
@@ -92,7 +85,7 @@ export function ShopCatalog() {
 
                 {/* Price Tag on Image */}
                 <div className="absolute top-2 right-2 sm:top-3.5 sm:right-3.5 z-10">
-                  <span className="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold font-sans tracking-wide bg-white/95 text-charcoal backdrop-blur-md shadow-xs sm:shadow-sm border border-white/80">
+                  <span className="skeuo-badge inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold font-sans tracking-wide text-charcoal">
                     {product.formattedPrice}
                   </span>
                 </div>
@@ -106,7 +99,7 @@ export function ShopCatalog() {
                     href={getWhatsAppLink(product)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 px-4 rounded-full text-xs font-semibold bg-terracotta text-canvas-ecru hover:bg-terracotta-hover active:scale-98 transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+                    className="skeuo-btn-primary w-full py-3 px-4 rounded-full text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <MessageCircle className="w-4 h-4" />
@@ -134,7 +127,7 @@ export function ShopCatalog() {
                     href={getWhatsAppLink(product)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2 px-3 rounded-full text-[11px] font-semibold bg-terracotta text-canvas-ecru hover:bg-terracotta-hover active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
+                    className="skeuo-btn-primary w-full py-2 px-3 rounded-full text-[11px] font-semibold flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>Order Now</span>
@@ -147,7 +140,7 @@ export function ShopCatalog() {
       </div>
 
       {/* Trust & Craftsmanship Notes */}
-      <div className="mt-12 p-6 rounded-3xl bg-canvas-warm/50 border border-border-subtle grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+      <div className="mt-12 p-6 sm:p-8 rounded-3xl neu-card grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
         <div className="flex items-center sm:items-start gap-3 flex-col sm:flex-row">
           <div className="w-9 h-9 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
             <Check className="w-4 h-4" />

@@ -5,7 +5,7 @@ export function ContactSvgIllustration() {
   return (
     <div className="flex flex-col h-full justify-between">
       {/* Visual Crochet & Message Illustration Card */}
-      <div className="relative rounded-3xl bg-gradient-to-br from-canvas-warm/90 via-canvas-ecru to-desert-sand/20 border border-stone-200/70 p-6 sm:p-8 shadow-sm overflow-hidden">
+      <div className="neu-card relative rounded-3xl bg-gradient-to-br from-canvas-warm/90 via-canvas-ecru to-desert-sand/20 p-6 sm:p-8 overflow-hidden">
         {/* Soft Ambient Radial Blur Background */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-terracotta/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-desert-sand/15 rounded-full blur-3xl pointer-events-none" />
@@ -225,7 +225,7 @@ export function ContactSvgIllustration() {
       {/* Studio Trust & Touchpoints Badges */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
         {/* Location Badge */}
-        <div className="p-3.5 rounded-2xl bg-white/90 border border-stone-200/70 shadow-xs flex items-center gap-3">
+        <div className="neu-card p-3.5 rounded-2xl flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
             <MapPin className="w-4 h-4" />
           </div>
@@ -236,7 +236,7 @@ export function ContactSvgIllustration() {
         </div>
 
         {/* Response Time Badge */}
-        <div className="p-3.5 rounded-2xl bg-white/90 border border-stone-200/70 shadow-xs flex items-center gap-3">
+        <div className="neu-card p-3.5 rounded-2xl flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-sage-olive/15 text-sage-olive flex items-center justify-center shrink-0">
             <Clock className="w-4 h-4" />
           </div>
@@ -247,7 +247,7 @@ export function ContactSvgIllustration() {
         </div>
 
         {/* 100% Handcrafted Badge */}
-        <div className="p-3.5 rounded-2xl bg-white/90 border border-stone-200/70 shadow-xs flex items-center gap-3">
+        <div className="neu-card p-3.5 rounded-2xl flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center shrink-0">
             <Heart className="w-4 h-4" />
           </div>
@@ -262,7 +262,7 @@ export function ContactSvgIllustration() {
           href="https://www.instagram.com/crochasthan?stkn=NDViNnVmaXM4N3li"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3.5 rounded-2xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200/60 transition-colors shadow-xs flex items-center gap-3 cursor-pointer group"
+          className="neu-card p-3.5 rounded-2xl flex items-center gap-3 cursor-pointer group hover:border-rose-300"
         >
           <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#FA7E1E] via-[#D62976] to-[#962FBF] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">

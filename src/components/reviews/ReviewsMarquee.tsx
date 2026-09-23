@@ -11,7 +11,7 @@ function ReviewCard({ review }: { review: ReviewItem }) {
     .join("");
 
   return (
-    <div className="w-[230px] sm:w-[380px] p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/95 border border-border-subtle/80 shadow-xs hover:shadow-xl hover:border-terracotta/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between shrink-0 select-none mx-1.5 sm:mx-3">
+    <div className="neu-card w-[230px] sm:w-[380px] p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl flex flex-col justify-between shrink-0 select-none mx-1.5 sm:mx-3">
       {/* Top Bar: User Identity & Verified Badge */}
       <div>
         <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3">
